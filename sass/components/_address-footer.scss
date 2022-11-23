@@ -1,11 +1,27 @@
+.address {
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            // align-items: center;
+            margin-right: 165px;
+        }
+}
+
 .address-list__component {
     margin-bottom: 9px;
+    justify-content: center;
+    
 }
 
 .address-list__address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
     color: var(--color-inverted);
     font-family: 'Roboto', inherit;
-    ;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -27,6 +43,17 @@
 { 
     color: var(--color-brand);
     text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // margin-right: 165px;
+}
+
+@media screen and (min-width: 1200px) {
+    
 }
 }
 

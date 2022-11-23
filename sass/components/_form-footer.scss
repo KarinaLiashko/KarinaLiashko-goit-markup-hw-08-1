@@ -1,5 +1,17 @@
 .subscription {
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+            
+@media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    @media screen and (min-width: 1200px) {
+        display: flex;
+         margin: 0 auto;   
+        }
 }
 
 .subscription__title {
@@ -16,10 +28,22 @@
 
 .subscription__space {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 12px;
-}
+        
+    @media screen and (min-width: 1200px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+        }
+    
+        @media screen and (min-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 
 .subscription__input {
     justify-content: space-between;
@@ -55,4 +79,16 @@
 &:hover {
     border-color: var(--color-brand);
 }
+}
+
+.subscription__label {
+    margin-bottom: 20px;
+    
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        gap: 12px;
+        }
 }

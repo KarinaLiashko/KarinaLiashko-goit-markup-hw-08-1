@@ -42,6 +42,16 @@ span>.logo-white {
     letter-spacing: 0.03em;
     list-style: none;
     margin-bottom: 20px;
+
+@media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1199px) {
+    margin-right: 206px;
+    justify-content: space-between;
+}
 }
 
 .logo-white {
