@@ -496,6 +496,11 @@ img {
   }
 }
 
+.header__burger-menu {
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-background);
+}
 @media screen and (min-width: 480px) {
   .header__burger-menu {
     display: none;
@@ -505,6 +510,14 @@ img {
 @media screen and (min-width: 480px) {
   .header__menu-item {
     margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .header__menu-item {
+    margin-left: 50px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -529,6 +542,13 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    gap: 344px;
   }
 }
 
@@ -695,7 +715,6 @@ span > .logo-white {
 }
 
 .logo-footer {
-  display: block;
   color: var(--color-inverted);
   text-decoration: none;
   font-family: "Raleway", sans-serif;
@@ -723,6 +742,12 @@ span > .logo-white {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo-footer {
+    display: block;
+    margin-bottom: 20px;
   }
 }
 
@@ -1418,13 +1443,12 @@ span > .logo-white {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-right: 93px;
     margin: 0 auto;
   }
@@ -1513,7 +1537,6 @@ span > .logo-white {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 0 auto;
   }
 }
 
@@ -1553,9 +1576,11 @@ span > .logo-white {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: auto;
+    gap: 12px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1605,18 +1630,6 @@ span > .logo-white {
 .subscription__label {
   margin-bottom: 20px;
 }
-@media screen and (min-width: 1200px) {
-  .subscription__label {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin: 0 auto;
-    gap: 12px;
-  }
-}
 
 .backdrop {
   background-color: rgba(0, 0, 0, 0.2);
@@ -1636,7 +1649,6 @@ span > .logo-white {
 }
 
 .modal {
-  display: block;
   position: absolute;
   width: 528px;
   top: 50%;
@@ -1651,6 +1663,15 @@ span > .logo-white {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  max-width: 450px;
+  max-height: 609px;
+  overflow-y: scroll;
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__title {
@@ -2020,13 +2041,19 @@ span > .logo-white {
 
 .mobile-menu {
   position: fixed;
+  overflow-y: scroll;
   top: 0;
   left: 0;
   display: none;
   width: 100%;
   height: 100%;
   background-color: var(--color-background);
-  padding: 40px 48px;
+  padding: 48px 40px;
+}
+@media (max-width: 767px) {
+  .mobile-menu {
+    display: none;
+  }
 }
 .mobile-menu.is-open {
   display: block;
@@ -2035,4 +2062,109 @@ span > .logo-white {
   position: absolute;
   top: 21px;
   right: 25px;
+}
+
+.mobile-menu__close-button {
+  position: absolute;
+  top: 21px;
+  left: auto;
+  right: 25px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.mobile-menu__close-button:hover .mobile-menu__close-button-icon {
+  fill: var(--color-brand);
+}
+
+.mobile-menu__list:not(:last-child) {
+  margin-bottom: 35px;
+}
+
+.mobile-menu__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  color: #212121;
+  letter-spacing: 0.02em;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
+}
+
+.mobile-menu__link:hover,
+.mobile-menu__link:focus {
+  color: var(--color-brand);
+}
+
+.mobile-menu__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.menu__tel {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--color-brand);
+}
+
+.menu__email {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 64px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.menu__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+
+.menu__social-item {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  text-decoration: none;
+  color: var(--color-brand);
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.current-link {
+  color: var(--color-brand);
 }/*# sourceMappingURL=main.css.map */

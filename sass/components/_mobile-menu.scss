@@ -1,12 +1,17 @@
 .mobile-menu {
     position: fixed;
+    overflow-y: scroll;
     top: 0;
     left: 0;
     display: none;
     width: 100%;
     height: 100%;
     background-color: var(--color-background);
-    padding: 40px 48px;
+    padding: 48px 40px;
+
+    @media (max-width: 767px) {
+            display: none;
+        }
 
     &.is-open {
         display: block;
@@ -18,3 +23,95 @@
         right: 25px;
     }
 }
+
+.mobile-menu__close-button {
+    position: absolute;
+    top: 21px;
+    left: auto;
+    right: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.mobile-menu__close-button:hover .mobile-menu__close-button-icon {
+    fill: var(--color-brand);
+}
+
+.mobile-menu__list:not(:last-child) {
+    margin-bottom: 35px;
+}
+
+.mobile-menu__link 
+{
+        text-decoration: none;
+
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.18;
+        color: #212121;
+        letter-spacing: 0.02em;
+
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: var(--timing-function);
+    }
+
+.mobile-menu__link:hover,
+.mobile-menu__link:focus {
+        color: var(--color-brand);
+        }
+
+    .mobile-menu__nav {
+        display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+    }
+
+    .menu__tel  {
+    display: block;
+        text-decoration: none;
+        margin-bottom: 32px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.18;
+        letter-spacing: 0.02em;
+        color: var(--color-brand);
+ }
+
+ .menu__email {
+display: block;
+    text-decoration: none;
+    margin-bottom: 64px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: #757575;
+ }
+
+ .menu__social {
+    display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 10px;
+ }
+
+ .menu__social-item {
+    font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+        text-decoration: none;
+        color: var(--color-brand);
+        padding-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+        transform: rotate(90deg);
+ }
+
+ .current-link {
+    color: var(--color-brand);
+ }

@@ -31,7 +31,6 @@ span>.logo-white {
 }
 
 .logo-footer {
-    display: block;
     color: var(--color-inverted);
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
@@ -40,7 +39,7 @@ span>.logo-white {
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
-    list-style: none;
+    list-style: none;  
     margin-bottom: 20px;
 
 @media screen and (min-width: 768px) {
@@ -51,6 +50,11 @@ span>.logo-white {
 @media screen and (max-width: 1199px) {
     margin-right: 206px;
     justify-content: space-between;
+}
+
+@media screen and (min-width: 1200px) {
+display: block;
+margin-bottom: 20px;
 }
 }
 
