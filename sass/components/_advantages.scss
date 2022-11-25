@@ -1,24 +1,26 @@
 .advantages {
-
+justify-content: space-between;
 
     @media screen and (min-width: 768px) {
             display: flex;
             flex-wrap: wrap;
-            margin: 15px;
+            margin: 30px;
         }
     
         @media screen and (min-width: 1200px) {
-            margin: 15px;
+            display: flex; 
+            margin: -15px;            
         }
     }
 
 
 .advantages__item {
 margin: 15px;
-padding-bottom: 30px;
-
+max-width: 270px;
+gap: 30px;
     @media screen and (min-width: 768px) {
         width: calc((100% - 2 * 30px) / 2);
+        justify-content: space-between;
     }
 
     @media screen and (min-width: 1200px) {
