@@ -1,7 +1,10 @@
 .address-list {
-    text-align: center;
+    
+    @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+}
 }
 
 .address-list__component {
@@ -9,6 +12,11 @@
     text-align: center;
     align-items: center;
     justify-content: center;
+
+    @media screen and (min-width: 1200px) {
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
 }
 
 .address-list__address {
@@ -46,7 +54,6 @@
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
-
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -68,4 +75,5 @@
     color: var(--color-brand);
     text-decoration: none;
 }
+
 }

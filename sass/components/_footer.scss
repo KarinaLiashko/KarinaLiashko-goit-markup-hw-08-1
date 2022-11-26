@@ -19,7 +19,17 @@
         }
 }
 
-
+.footer-container_wraper {
+    @media screen and (min-width: 768px) {
+            display: flex;
+            align-items: baseline;
+            gap: 70px;
+    
+            @media screen and (max-width: 1199px) {
+                justify-content: space-around;
+            }
+        }
+}
 .footer-accent {
     color: var(--color-brand);
     font-family: 'Raleway', inherit;
@@ -31,6 +41,15 @@
 }
 
 .footer-container__address {
+
+// @media screen and (min-width: 768px) {
+//     top: 60px;
+//     left: 76px;
+//     display: flex;
+//     flex-direction: column;
+//     margin-bottom: 60px;
+// }
+
 @media screen and (max-width: 1199px) {
         display: flex;
         flex-direction: column;

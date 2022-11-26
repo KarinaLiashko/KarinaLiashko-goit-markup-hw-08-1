@@ -21,6 +21,13 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--color-inverted);
+
+    @media screen and (max-width: 1199px) {
+            margin-top: 60px;
+        }
+  @media screen and (max-width: 1199px) and (min-width: 768px) {
+             margin-top: -60px;
+        }
 }
 
 .social-media-list {
