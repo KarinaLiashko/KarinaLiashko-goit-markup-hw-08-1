@@ -2,18 +2,20 @@
     background-color: var(--color-background-dark);
     text-align: center;
     padding: 118px 60px;
-    background-position: 50% 50%;
+    background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 background-image: linear-gradient(rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)), url('../images/hero-background.jpg');
 
-@media screen and (min-width:480px) {
-    background-size: contain;
-}
+// @media (min-device-pixel-ratio: 2),
+// (min-resolutio: 192dpi), /* dots per inch */ (min-resolution: 2dppx) /* dots per pixel */ {
+//     background-image: url('../../images/Backgroundimage@2x.jpg');
+// }
+
 
  @media screen and (min-width:768px) {
-    background-size: contain;
+
     }
 
 @media screen and (min-width:1200px) {

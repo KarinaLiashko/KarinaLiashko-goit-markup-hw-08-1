@@ -36,31 +36,6 @@
     }
 }
 
-.header__menu--information {
-
-    @media screen and (min-width: 768px) {
-        display: block;
-        margin-left: 96px;
-        font-size: 12px;
-        letter-spacing: 0.02em;
-    }
-}
-
-.header__menu-item {
-display: flex;
-    align-items: center;
-    margin-left: auto;
-
-    @media screen and (max-width: 1199px) {
-        flex-direction: column;
-        right: 0px;
-        padding-top: 6px;
-        padding-bottom: 6px;
-        gap: 6px;
-        align-items: flex-start;
-    }
-}
-
 .header__nav-contacts {
     display: none;
     align-items: baseline;
@@ -70,9 +45,9 @@ display: flex;
     @media screen and (min-width: 768px) {
         display: flex;
     }
-    @media screen and (min-width: 1200px) {
-        display: flex;
-    }
+    // @media screen and (min-width: 1200px) {
+    //     display: flex;
+    // }
 }
 
 .header__list {
@@ -160,14 +135,15 @@ display: flex;
     display: flex;
 }
 
-// @media screen and (min-width: 768px) {
-//     display: flex;
-// }
+@media screen and (min-width: 768px) {
+    display: flex;
+    // margin-bottom: 10px;
+}
 
-// @media screen and (min-width: 1200px) {
-//     display: flex;
-// }
+@media screen and (min-width: 1200px) {
+    display: flex;
 
+}
 }
 
 .header__menu-wraper {
