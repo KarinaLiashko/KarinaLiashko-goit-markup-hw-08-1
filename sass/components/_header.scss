@@ -2,14 +2,13 @@
     display: flex;
     flex-grow: 1;
     align-items: center;
-    gap: 50px;
 }
 
 .header__nav {
-    flex-grow: 1;
+    // flex-grow: 1;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    // justify-content: flex-start;
     gap: 93px;
 }
 
@@ -21,7 +20,6 @@
     position: absolute;
         display: flex;
         align-items: center;
-        justify-content: center;
     
         min-height: 24px;
         min-width: 16px;
@@ -31,7 +29,6 @@
         right: 23px;
         padding: 0;
     
-        background-color: transparent;
         cursor: pointer;
         border: none;
         outline: none;
@@ -46,31 +43,45 @@
     display: none;
     
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 768px) {
         display: flex;
         gap: 50px;
+
     }
 
         @media screen and (min-width: 1200px){
+            display: flex;
             gap: 50px;
         }
 }
 
-.header__nav-contacts {
-    display: none;
-    align-items: baseline;
-    justify-content: flex-end;
-    gap: 344px;
+// .header__menu-contacts {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
 
-    @media screen and (min-width: 768px) {
-        display: flex;
-        gap: 96px;
-    }
+//     // @media screen and (min-width: 768px) {
+//     //     display: flex;
+//     //     // gap: 96px;
+//     // }
+//     @media screen and (min-width: 1200px) {
+//         display: flex;
+//         align-items: baseline;
+//             justify-content: center;
+//             // gap: 315px;
+//     }
+// }
+
+.header__contact-container {
+    display: flex;
+}
+
+.header__menu-item {
+   
     @media screen and (min-width: 1200px) {
-        display: flex;
-        align-items: flex-end;
-            justify-content: flex-end;
-            gap: 344px;
+display: flex;
+justify-content: center;
+align-items: baseline;
     }
 }
 
@@ -119,7 +130,7 @@ padding: 32px 0;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    margin: auto;
+    
 
     align-items: center;
     transition: opacity 250ms cubic-bezier(0.4,
@@ -156,18 +167,21 @@ padding: 32px 0;
     fill: var(--color-brand);
 }
 
-@media screen and (min-width: 480px) { 
-    display: flex;
-}
+// @media screen and (min-width: 480px) { 
+//     display: flex;
+// }
 
 @media screen and (min-width: 768px) {
     display: flex;
-    // margin-bottom: 10px;
+    padding-bottom: 10px;
+    margin-left: 96px;
+    font-size: 12px;
 }
 
 @media screen and (min-width: 1200px) {
     display: flex;
     padding: 32px 0;
+    margin: auto;
 }
 }
 
