@@ -1,10 +1,12 @@
 .advantages {
+display: flex;
+flex-wrap: wrap;
 justify-content: space-between;
+gap: 30px;
 
     @media screen and (min-width: 768px) {
             display: flex;
             flex-wrap: wrap;
-            margin: 30px;
         }
     
         @media screen and (min-width: 1200px) {
@@ -13,22 +15,20 @@ justify-content: space-between;
         }
     }
 
-
 .advantages__item {
-margin: 15px;
-max-width: 450px;
+width: 100%;
+gap: 30px;
 
     @media screen and (min-width: 768px) {
-        width: calc((100% - 2 * 30px) / 2);
-        justify-content: space-between;
-        max-width: 354px;
-        gap: 30px;
+        width: calc(50% - 15px);
+        // justify-content: space-between;
+        // max-width: 354px;
     }
 
     @media screen and (min-width: 1200px) {
         width: calc((100% - 4 * 30px) / 4);
         max-width: 270px; 
-        gap: 30px;
+        
     }
 
     // &:not(:last-child) {

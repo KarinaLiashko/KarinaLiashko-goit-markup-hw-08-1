@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
         margin-bottom: 60px;
             
 @media screen and (min-width: 768px) {
@@ -10,14 +11,15 @@
     align-items: center;
 }
     @media screen and (min-width: 1200px) {
-        margin: 0 auto;
-        text-align: left;
+        margin-left: auto;
+        max-width: 570px;
+        align-items: flex-start;
         }
 }
 
 .subscription__title {
     display: flex;
-    justify-content: flex-start;
+   text-align: start;
     text-align: left;
     margin-top: 0;
     margin-bottom: 20px;
@@ -35,7 +37,6 @@
 
     
         @media screen and (min-width: 1200px) {
-            align-items: center;
             justify-content: baseline;
             gap: 12px;
         }

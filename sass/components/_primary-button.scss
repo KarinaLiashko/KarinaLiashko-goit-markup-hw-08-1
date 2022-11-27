@@ -50,4 +50,10 @@
     padding: 10px 28px 10px;
     fill: #000;
     margin: 0 auto;
+
+    @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    }
 }
